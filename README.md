@@ -3,18 +3,20 @@ TODO: intro
 
 ## Building
 ```shell
-TODO: cmd for build
+make
 ```
 
 ## Running
 ```shell
-TODO: cmd for running binary
+sudo insmod proc_count.ko
+cat /proc/count
 ```
 TODO: results?
 
 ## Cleaning Up
 ```shell
-TODO: cmd for cleaning the built binary
+make clean
+sudo rmmod proc_count.ko
 ```
 
 ## Testing

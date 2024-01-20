@@ -1,5 +1,6 @@
 # A Kernel Seedling
-TODO: intro
+proc_count.c creates a /proc/count file and prints the number of processes 
+running on the kernel to the file.
 
 ## Building
 ```shell

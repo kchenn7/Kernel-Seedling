@@ -9,21 +9,23 @@ make #this command compiles the modules needed for proc_count
 
 ## Running
 ```shell
-sudo insmod proc_count.ko #inserts kernel module and runs program
-cat /proc/count #prints the result
+sudo insmod proc_count.ko #inserts kernel module and runs the program
+cat /proc/count #prints the result from /proc/count
 ```
 177 is the result from cat /proc/count
 
 ## Cleaning Up
 ```shell
-make clean #removes all created files from make
-sudo rmmod proc_count.ko #removes inserted kernel module
+make clean #removes all created files from previous make, if there aren't any then it returns error
+sudo rmmod proc_count.ko #removes inserted kernel module, if there isn't then it returns error
 ```
 
 ## Testing
 ```python
 python -m unittest
 ```
+I used python -m unittest after cleaning up everything previously generated.
+output:
 cs111% python -m unittest
 ...
 ----------------------------------------------------------------------
@@ -38,4 +40,5 @@ It should match release numbers as seen on https://www.kernel.org/.
 ```shell
 uname -r -s -v
 ```
-Linux 5.14.8-arch1-1. I used uname -r specifically to find the kernel version. -r -s -v provides more information.
+Kernel Release version: Linux 5.14.8-arch1-1. I used uname -r specifically to find the kernel version. 
+-r -s -v provides more information.
